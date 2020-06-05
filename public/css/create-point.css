@@ -66,6 +66,11 @@ form fieldset{
 
 form legend{
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
 
 }
 
@@ -74,6 +79,10 @@ form legend h2{
 
 }
 
+form legend span{
+    color: var(--title-color);
+    font-size: 14px;
+}
 form .field {
     display: flex;
     flex-direction: column;
@@ -141,4 +150,54 @@ form button {
 form button:hover {
     background-color: #2fb86e;
 
+}
+
+
+
+.items-grid{
+    display: grid;
+    /*ajuste da quantidade de colunas */
+    grid-template-columns: 1fr 1fr 1fr;
+    /*separação das colunas*/
+    gap: 16px;
+}
+
+.items-grid li {
+    background-color: #f5f5f5;
+    list-style: none;
+
+    border: 2px solid #f5f5f5;
+
+    height: 180px;
+
+    padding: 12px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+    /*colocar ponteiro do mouse quando selecionar*/
+    cursor: pointer;
+}
+
+.items-grid li span {
+    display: flex;
+    flex: 1;
+
+    align-items: center;
+    color: var(--title-color);
+}   
+
+/*Criando estilização ao selecionar um item */
+.items-grid li.select {
+    background: #e1faec;
+    border: 2px solid #34cb79;
+
+}
+/* Retirando a opção de clicavel  para não ficar clicavel*/
+.items-grid li img,  .items-grid li span{
+    pointer-events: none;
 }

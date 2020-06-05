@@ -1,0 +1,112 @@
+{% extends './layout.html' %}
+
+{% set pageId = 'page-create-point' %}
+
+{% block title %}
+    <title>Create Point</title>
+{% endblock title %}
+
+{% block style %}
+    <link rel="stylesheet" href="./css/create-point.css">
+{% endblock style %}
+
+
+{% block content %}
+    {% include "./nunjucks/page-header.html"%}
+
+    <form action="">
+
+        <h1>Cadastro do ponto de coleta</h1>
+
+        <fieldset>
+            <legend>
+                <h2>Dados da entidade</h2>
+            </legend>
+
+            
+            <div class="field-group">
+               <div class="field">
+                <label for="name">Nome da entidade</label>
+                <input type="text" name='name'>
+            </div>mn
+                <div class="field">
+                    <label for="img">Imagem</label>
+                    <input type="url" name="img" required>
+                </div>
+            </div>
+
+           
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="adress">Endereço</label>
+                    <input type="text" name="adress">
+                </div>
+                <div class="field">
+                    <label for="number">Numero/Complemento</label>
+                    <input type="text" name="number" id="">
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="state">Estado</label>
+                    <select name="uf" id="">
+                        <option value="">Selecione um estado</option>
+                    </select>
+                    <input type="hidden" name="state">
+                </div>
+                <div class="field">
+                    <label for="city">Cidade</label>
+                    <select name="city" id="" disabled="disabled">
+                        <option value="">Selecione uma cidade</option>
+                    </select>
+
+                </div>
+            </div>
+            <button type="submit">Cadastrar ponto de entrega</button>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                <h2>Itens de coleta</h2>
+                <span>selecione um ou mais itens abaixo: </span>
+            </legend>
+
+            <div class="items-grid">
+                <li data-id='1'><img src="./img/lampadas.svg" alt="Lâmpadas">
+                    <span>Lâmpadas</span>
+                </li>
+                <li data-id='2'><img src="./img/baterias.svg" alt="Pilhas e Baterias">
+                    <span>Pilhas e Baterias</span>
+                </li>
+                <li data-id='3'><img src="./img/papeis-papelao.svg" alt="Papéis e Papelão">
+                    <span>Papéis e Papelão</span>
+                </li>
+                <li data-id='4'><img src="./img/eletronicos.svg" alt="Residuos Eletronicos">
+                    <span>Residuos Eletronicos</span>
+                </li>
+                <li data-id='5'><img src="./img/organicos.svg" alt="Residuos Orgânicos">
+                    <span>Residuos Orgânicos</span>
+                </li>
+                <li data-id='6'><img src="./img/oleo.svg" alt="Oléo de cozinha">
+                    <span>Oléo de cozinha</span>
+                </li>
+                <input type="hidden" name="items">
+            </div>
+
+        </fieldset>
+
+    </form>
+{% endblock content %}
+
+
+{% block script %}
+    <script src="/js/create-point.js"></script>
+{% endblock script %}
+
+
+</body>
+
+</html>

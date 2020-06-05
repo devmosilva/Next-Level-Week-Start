@@ -1,0 +1,16 @@
+{
+  "name": "nlw",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "repository": "git@github.com:devmosilva/Next-Level-Week-Start.git",
+  "author": "Matheus Silva <devmosilva@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "nunjucks": "^3.2.1"
+  }
+}
